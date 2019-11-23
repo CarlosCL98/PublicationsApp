@@ -1,0 +1,32 @@
+/*------------------------------------*\
+  #CARD-PUBLICATION
+\*------------------------------------*/
+
+.container {
+  margin-top: 2%;
+  width: 70%;
+}
+
+.textAreaPublication {
+  width: 100%;
+  border: none;
+}
+
+.textAreaPublication::placeholder {
+  color: #4cc830 !important;
+}
+
+.textAreaPublication:focus {
+  border-color: #4cc830 !important;
+}
+
+.cardActionsPublication {
+  margin-left: 89%;
+}
+
+.buttonPublish {
+  background-color: #4cc830 !important;
+  font-size: 12px !important;
+  text-transform: capitalize !important;
+  color: white !important;
+}

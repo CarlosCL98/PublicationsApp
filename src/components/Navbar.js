@@ -3,10 +3,6 @@ import "../sass/Navbar.scss";
 
 class NavBar extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,7 +13,7 @@ class NavBar extends React.Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className="userHello">
-            <p>Hola! Juan</p>
+            <p>Hola! {this.props.user.name}</p>
           </div>
         </div>
       </nav>
