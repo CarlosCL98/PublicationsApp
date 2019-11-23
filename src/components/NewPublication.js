@@ -8,7 +8,8 @@ class NewPublication extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: ""
+      content: "",
+      date: ""
     };
     this.handleOnWritePublication = this.handleOnWritePublication.bind(this);
     this.handleOnPublish = this.handleOnPublish.bind(this);
@@ -19,8 +20,9 @@ class NewPublication extends React.Component {
   };
 
   handleOnPublish = (e) => {
+    this.setState({date: new Date().toDateString()});
     console.log("Voy a publicar!");
-  }
+  };
 
   render() {
     return (

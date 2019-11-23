@@ -1,6 +1,7 @@
 import React from "react";
 import "../sass/Main.scss"
 import NewPublication from "./NewPublication";
+import Publications from "./Publications";
 
 class Main extends React.Component {
 
@@ -8,6 +9,7 @@ class Main extends React.Component {
     return (
       <div>
         <NewPublication />
+        <Publications />
       </div>
     );
   }
