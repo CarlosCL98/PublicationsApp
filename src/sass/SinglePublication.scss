@@ -1,22 +1,38 @@
-Button {
+.card-content {
+  text-align: left !important;
+  margin-bottom: 3%;
+}
+
+.button-reactions {
   color: #4cc830 !important;
   text-transform: capitalize !important;
   margin-top: -3% !important;
 }
 
-.avatarImage {
+.button-comments {
+  color: #4cc830 !important;
+  text-transform: capitalize !important;
+  margin-top: -3% !important;
+}
+
+.avatar-image {
   width: 100%;
 }
 
-.labelPublication {
+.label-publication {
   color: #4cc830 !important;
   font-weight: bold !important;
 }
 
-.datePublication {
-  color: #b9b9b9;
+.date-publication {
+  color: #a5a5a5;
   font-size: 10px;
   margin-top: -1%;
+}
+
+.publication-content {
+  width: 95%;
+  text-align: justify;
 }
 
 .reactions {
@@ -29,4 +45,14 @@ Button {
   text-align: right;
   margin-top: 0.5%;
   margin-bottom: -1%;
+}
+
+.comments-section {
+  margin-top: 2%;
+}
+
+.textarea-comments {
+  width: 100%;
+  border-color: #dddddd;
+  margin-top: 2%;
 }

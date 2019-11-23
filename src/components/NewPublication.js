@@ -27,17 +27,19 @@ class NewPublication extends React.Component {
   render() {
     return (
       <div className="container">
-        <Card className="cardNewPublication">
+        <Card>
           <CardContent>
-            <textarea className="textAreaPublication"
+            <textarea className="form-control textarea-publication"
                       value={this.state.content}
                       onChange={this.handleOnWritePublication}
-                      placeholder="Escribe aquí tu estado"/>
+                      placeholder="Escribe aquí tu estado"
+            />
           </CardContent>
           <Divider/>
-          <CardActions className="cardActionsPublication">
-            <Button className="buttonPublish"
-                    onClick={this.handleOnPublish}>Publicar</Button>
+          <CardActions className="card-actions-publication">
+            <Button className="button-publish"
+                    onClick={this.handleOnPublish}>Publicar
+            </Button>
           </CardActions>
         </Card>
       </div>

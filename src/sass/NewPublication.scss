@@ -7,24 +7,24 @@
   width: 70%;
 }
 
-.textAreaPublication {
+.textarea-publication {
   width: 100%;
   border: none;
 }
 
-.textAreaPublication::placeholder {
+.textarea-publication::placeholder {
   color: #4cc830 !important;
 }
 
-.textAreaPublication:focus {
+.textarea-publication:focus {
   border-color: #4cc830 !important;
 }
 
-.cardActionsPublication {
+.card-actions-publication {
   margin-left: 89%;
 }
 
-.buttonPublish {
+.button-publish {
   background-color: #4cc830 !important;
   font-size: 12px !important;
   text-transform: capitalize !important;
