@@ -8,7 +8,7 @@ class NewPublication extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      creator: JSON.parse(localStorage.getItem("user")).name,
+      creator: JSON.parse(localStorage.getItem("user")),
       content: ""
     };
     this.handleOnWritePublication = this.handleOnWritePublication.bind(this);
@@ -20,7 +20,9 @@ class NewPublication extends React.Component {
   };
 
   handleOnPublish = (e) => {
-    console.log("Voy a publicar!");
+    if (!this.state.content.length) {
+      return ;
+    }
     this.props.addNewPublication({
       creator: this.state.creator,
       content: this.state.content,

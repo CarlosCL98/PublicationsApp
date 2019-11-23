@@ -8,11 +8,7 @@ class Publications extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      publications: [{
-        creator: `${JSON.parse(localStorage.getItem("user")).name} ${JSON.parse(localStorage.getItem("user")).lastName}`,
-        creationDate: "Hace 40 minutos",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo quam, convallis at felis sit amet, feugiat convallis libero. Sed arcu elit, mollis dapibus sem nec, consequat dapibus nulla."
-      }]
+      publications: []
     };
     this.addNewPublication = this.addNewPublication.bind(this);
   }
