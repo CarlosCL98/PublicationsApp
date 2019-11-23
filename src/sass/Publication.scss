@@ -1,5 +1,6 @@
-.card-content {
+.publication {
   text-align: left !important;
+  margin-top: 3%;
   margin-bottom: 3%;
 }
 
@@ -15,8 +16,12 @@
   margin-top: -3% !important;
 }
 
-.avatar-image {
-  width: 100%;
+.publication-avatar {
+  text-align: right !important;
+}
+
+.publication-avatar-image {
+  width: 90%;
 }
 
 .label-publication {
@@ -37,12 +42,14 @@
 
 .reactions {
   text-align: left;
+  font-size: 12px;
   margin-top: 0.5%;
   margin-bottom: -1%;
 }
 
 .comments {
   text-align: right;
+  font-size: 12px;
   margin-top: 0.5%;
   margin-bottom: -1%;
 }

@@ -13,7 +13,7 @@ class NavBar extends React.Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className="navbar-user">
-            <p>Hola! {this.props.user.name}</p>
+            <p>Hola! {JSON.parse(localStorage.getItem("user")).name}</p>
           </div>
         </div>
       </nav>

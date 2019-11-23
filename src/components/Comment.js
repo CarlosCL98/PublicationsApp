@@ -8,9 +8,9 @@ class Comment extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      creator: "Carlos",
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      creationDate: "Justo ahora"
+      creator: this.props.creator,
+      comment: this.props.comment,
+      creationDate: this.props.creationDate
     };
   }
 
@@ -18,7 +18,7 @@ class Comment extends React.Component {
     return (
       <div id="comment">
         <div className="row">
-          <div className="col-md-1">
+          <div className="col-md-1 comment-avatar">
             <img className="comment-avatar-image"
                  src={Avatar}
                  alt="avatar"

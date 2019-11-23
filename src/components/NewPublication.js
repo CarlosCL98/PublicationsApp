@@ -8,8 +8,8 @@ class NewPublication extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: "",
-      date: ""
+      creator: JSON.parse(localStorage.getItem("user")).name,
+      content: ""
     };
     this.handleOnWritePublication = this.handleOnWritePublication.bind(this);
     this.handleOnPublish = this.handleOnPublish.bind(this);
@@ -20,13 +20,18 @@ class NewPublication extends React.Component {
   };
 
   handleOnPublish = (e) => {
-    this.setState({date: new Date().toDateString()});
     console.log("Voy a publicar!");
+    this.props.addNewPublication({
+      creator: this.state.creator,
+      content: this.state.content,
+      creationDate: new Date().toDateString()
+    });
+    this.setState({content: ""});
   };
 
   render() {
     return (
-      <div className="container">
+      <div>
         <Card>
           <CardContent>
             <textarea className="form-control textarea-publication"
