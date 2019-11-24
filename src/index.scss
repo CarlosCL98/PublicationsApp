@@ -1,8 +1,22 @@
+/**
+ * CONTENTS
+ *
+ * Each .scss file contains the design classes and attributes of each component. Above each one it a little description
+ * of the component.
+ * The files are organized based in the order of the classes in the components.
+ *
+ * Generically the content is:
+ * First the container or main div that contains everything of the component. Then the parts like images (img), labels,
+ * text areas, buttons and paragraphs (p) used.
+ * Next to each one of them, if needed there is the hover or focus characteristic.
+ * Finally, inside some classes there are @media queries that allows to see this app from a computer or a mobile.
+ */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #e4e4e4;
@@ -10,5 +24,5 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  monospace;
 }

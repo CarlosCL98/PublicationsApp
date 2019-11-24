@@ -1,7 +1,9 @@
 /*------------------------------------*\
   #NAVBAR
 \*------------------------------------*/
+
 .navbar {
+  /*It's necessary use important because I needed to override this property from bootstrap*/
   background-color: white !important;
   color: black;
   width: 100%;
@@ -15,15 +17,16 @@
 
 .navbar-brand {
   float: none;
-  font-weight: bold !important;
+  font-weight: bold;
 }
 
 .navbar-user {
   color: gray;
-  margin-top: 15% !important;
+  margin-top: 15%;
   font-size: 13px;
+  text-align: center;
   @media screen and (max-device-width: 800px) {
-    margin-top: 5% !important;
+    margin-top: 5%;
   }
 }
 
@@ -31,6 +34,7 @@
   width: 100%;
 }
 
-.collapse.navbar-collapse {
-  width: 8% !important;
+.collapse,
+.navbar-collapse {
+  width: 8%;
 }

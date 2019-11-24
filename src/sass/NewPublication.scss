@@ -1,39 +1,38 @@
 /*------------------------------------*\
-  #CARD-PUBLICATION
+  #CARD PUBLICATION
+  #Create new publications
 \*------------------------------------*/
 
-.container {
-  margin-top: 2%;
-  width: 70%;
-}
-
-.textarea-publication {
+.newpublication-textarea {
   width: 100%;
   border: none;
   resize: none;
 }
 
-.textarea-publication::placeholder {
-  color: #4cc830 !important;
+.newpublication-textarea::placeholder {
+  color: #4cc830;
 }
 
-.textarea-publication:focus {
-  border-color: #4cc830 !important;
-  box-shadow: 0 0 0 0.2em #d8f1d3 !important;
+.newpublication-textarea:focus {
+  border-color: #4cc830;
+  box-shadow: 0 0 0 0.2em #d8f1d3;
 }
 
-.card-actions-publication {
+.newpublication-cardactions {
+  /*I use important here, because the card action has a property that I had to override*/
   display: block !important;
-  text-align: right !important;
+  text-align: right;
 }
 
-.button-publish {
-  background-color: #4cc830 !important;
-  font-size: 12px !important;
-  text-transform: capitalize !important;
-  color: white !important;
+.newpublication-button {
+  background-color: #4cc830;
+  font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: auto;
 }
 
-.button-publish:focus {
-  outline: 0 !important;
+.newpublication-button:focus {
+  outline: 0;
 }

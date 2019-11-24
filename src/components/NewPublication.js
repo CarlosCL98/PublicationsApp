@@ -36,17 +36,17 @@ class NewPublication extends React.Component {
       <div>
         <Card>
           <CardContent>
-            <textarea className="form-control textarea-publication"
+            <textarea className="form-control  newpublication-textarea"
                       value={this.state.content}
                       onChange={this.handleOnWritePublication}
                       placeholder="Escribe aquí tu estado"
             />
           </CardContent>
           <Divider/>
-          <CardActions className="card-actions-publication">
-            <Button className="button-publish"
+          <CardActions className="newpublication-cardactions">
+            <button className="newpublication-button"
                     onClick={this.handleOnPublish}>Publicar
-            </Button>
+            </button>
           </CardActions>
         </Card>
       </div>

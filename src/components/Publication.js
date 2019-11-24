@@ -69,7 +69,7 @@ class Publication extends React.Component {
 
   render() {
     const textareaComment = (
-      <textarea className="form-control textarea-comments"
+      <textarea className="form-control publication-textarea-comments"
                 value={this.state.comment}
                 onChange={this.handleOnWriteComment}
                 onKeyPress={this.handleCreateComment}
@@ -77,7 +77,7 @@ class Publication extends React.Component {
       />
     );
     const small = (
-      <div className="textarea-comments-small">
+      <div className="publication-textarea-comments-small">
         <small>Presiona enter para enviar</small>
       </div>
     );
@@ -91,42 +91,42 @@ class Publication extends React.Component {
     ));
     const reactionBlue = this.state.reactions.some(r => (
       r.reaction === "blue"
-    )) ? <img className="reaction-selected-image" src={"./imgs/blueCircle.png"} alt="reactionImage"/> : "";
+    )) ? <img className="publication-reaction-image" src={"./imgs/blueCircle.png"} alt="reactionImage"/> : "";
     const reactionYellow = this.state.reactions.some(r => (
       r.reaction === "yellow"
-    )) ? <img className="reaction-selected-image" src={"./imgs/yellowCircle.png"} alt="reactionImage"/> : "";
+    )) ? <img className="publication-reaction-image" src={"./imgs/yellowCircle.png"} alt="reactionImage"/> : "";
     const reactionRed = this.state.reactions.some(r => (
       r.reaction === "red"
-    )) ? <img className="reaction-selected-image" src={"./imgs/redCircle.png"} alt="reactionImage"/> : "";
+    )) ? <img className="publication-reaction-image" src={"./imgs/redCircle.png"} alt="reactionImage"/> : "";
     return (
       <Card className="publication">
         <CardContent>
           <div className="row">
-            <div className="col-md-1 col-sm-4 col-2 publication-avatar">
+            <div className="col-md-1  col-sm-4  col-2  publication-avatar">
               <img className="publication-avatar-image"
                    src={Avatar}
                    alt="avatar"
               />
             </div>
-            <div className="col-md-11 col-sm-8 col-10">
-              <InputLabel
-                className="label-publication">{this.state.creator.name} {this.state.creator.lastName}</InputLabel>
-              <p className="date-publication">{this.state.creationDate}</p>
+            <div className="col-md-11  col-sm-8  col-10">
+              <label
+                className="publication-label">{this.state.creator.name} {this.state.creator.lastName}</label>
+              <p className="publication-date">{this.state.creationDate}</p>
               <p className="publication-content">{this.state.content}</p>
-              <Button className="button-reactions"
+              <button className="publication-button-reactions"
                       onClick={this.handleOnClickReactions}
               >Reaccionar
-              </Button>&nbsp;&nbsp;
-              <Button className="button-comments" onClick={this.handleOnClickComment}>Comentar</Button>
+              </button>&nbsp;
+              <button className="publication-button-comments" onClick={this.handleOnClickComment}>Comentar</button>
             </div>
           </div>
           {this.state.reactionsSelected ? <Reactions addReaction={this.addReaction}/> : ""}
           <Divider/>
           <div className="row">
-            <div className="col-md-6 col-sm-6 col-6 reactions">
-              {reactionBlue} {reactionYellow} {reactionRed} {this.state.reactions.length === 0 ? "Sin reacciones" : this.state.reactions.length}
+            <div className="col-md-6  col-sm-6  col-6  publication-reactions">
+              {reactionBlue}{reactionRed}{reactionYellow} &nbsp; {this.state.reactions.length === 0 ? "Sin reacciones" : this.state.reactions.length}
             </div>
-            <div className="col-md-6 col-sm-6 col-6 comments">
+            <div className="col-md-6  col-sm-6  col-6  publication-comments">
               <p>
                 {commentsLength === 0 ? "No hay comentarios" :
                   commentsLength > 1 ? commentsLength + " comentarios" : commentsLength + " comentario"
@@ -135,7 +135,7 @@ class Publication extends React.Component {
             </div>
           </div>
           <Divider/>
-          <div className="comments-section">
+          <div className="publication-comments-section">
             {comments}
             {this.state.commentSelected ? small : ""}
             {this.state.commentSelected ? textareaComment : ""}

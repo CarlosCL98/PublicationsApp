@@ -13,7 +13,7 @@ class Reactions extends React.Component {
 
   render() {
     const reactions = this.state.reactions.map((r, i) => (
-      <div key={i} className="col-md-1 col-2">
+      <div key={i} className="col-md-1  col-2">
         < Reaction
           key={i}
           reaction={r.reaction}

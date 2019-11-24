@@ -1,28 +1,50 @@
+/*------------------------------------*\
+  #PUBLICATION
+  #Each one of the publications
+\*------------------------------------*/
+
 .publication {
-  text-align: left !important;
+  text-align: left;
   margin-top: 3%;
   margin-bottom: 3%;
 }
 
-.button-reactions,
-.button-comments {
-  color: #4cc830 !important;
-  text-transform: capitalize !important;
-  margin-top: -3% !important;
-  padding: 0 !important;
-  background: none !important;
+.publication-label {
+  color: #4cc830;
+  font-weight: bold;
 }
 
-.button-reactions:focus,
-.button-comments:focus {
+.publication-date {
+  color: #a5a5a5;
+  font-size: 10px;
+  margin-top: -1%;
+}
+
+.publication-content {
+  width: 95%;
+  text-align: justify;
+}
+
+.publication-button-reactions,
+.publication-button-comments {
+  color: #4cc830;
+  margin-top: -3%;
+  margin-bottom: 2%;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.publication-button-reactions:focus,
+.publication-button-comments:focus {
   outline: 0;
 }
 
 .publication-avatar {
-  text-align: left !important;
+  text-align: left;
   @media screen and (max-device-width: 525px) {
-    padding: 0 5% !important;
-    text-align: center !important;
+    padding: 0 5%;
+    text-align: center;
   }
 }
 
@@ -36,51 +58,31 @@
   }
 }
 
-.label-publication {
-  color: #4cc830 !important;
-  font-weight: bold !important;
+.publication-reactions,
+.publication-comments {
+  font-size: 12px;
+  margin-top: 0.5%;
+  margin-bottom: -1%;
+  @media screen and (max-device-width: 525px) {
+    margin-top: 5%;
+  }
 }
 
-.date-publication {
-  color: #a5a5a5;
-  font-size: 10px;
-  margin-top: -1%;
-}
-
-.publication-content {
-  width: 95%;
-  text-align: justify;
-}
-
-.reactions {
+.publication-reactions {
   text-align: left;
-  font-size: 12px;
-  margin-top: 0.5%;
-  margin-bottom: -1%;
-  color: #4cc830 !important;
-  @media screen and (max-device-width: 525px) {
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
+  color: #4cc830;
 }
 
-.comments {
+.publication-comments {
   text-align: right;
-  font-size: 12px;
-  margin-top: 0.5%;
-  margin-bottom: -1%;
-  @media screen and (max-device-width: 525px) {
-    margin-top: 5%;
-    margin-bottom: 0%;
-  }
 }
 
-.comments-section {
+.publication-comments-section {
   margin-top: 2%;
   background-color: #f7f7f7;
 }
 
-.textarea-comments {
+.publication-textarea-comments {
   width: 100%;
   border-color: #4cc830;
   resize: none;
@@ -89,17 +91,17 @@
   }
 }
 
-.textarea-comments:focus {
-  box-shadow: 0 0 0 0.2em #d8f1d3 !important;
-  border-color: #9ac194 !important;
+.publication-textarea-comments:focus {
+  box-shadow: 0 0 0 0.2em #d8f1d3;
+  border-color: #9ac194;
 }
 
-.textarea-comments-small {
+.publication-textarea-comments-small {
   font-size: 12px;
-  text-align: right !important;
+  text-align: right
 }
 
-.reaction-selected-image {
+.publication-reaction-image {
   width: 5%;
   padding-left: 0;
   padding-right: 0;

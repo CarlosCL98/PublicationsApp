@@ -28,7 +28,7 @@ class Publications extends React.Component {
       />
     ));
     return (
-      <div className="container">
+      <div className="publications-container">
         {/*Space to do a publication*/}
         <NewPublication addNewPublication={this.addNewPublication}/>
         {/*Publications*/}
