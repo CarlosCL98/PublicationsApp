@@ -5,6 +5,7 @@ import Avatar from "../imgs/avatar.png";
 import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
 import Comment from "./Comment";
+import Reactions from "./Reactions";
 
 class Publication extends React.Component {
 
@@ -17,11 +18,13 @@ class Publication extends React.Component {
       reactions: [],
       comment: "",
       comments: [],
-      commentSelected: false
+      commentSelected: false,
+      reactionsSelected: false
     };
     this.handleOnWriteComment = this.handleOnWriteComment.bind(this);
     this.handleOnClickComment = this.handleOnClickComment.bind(this);
     this.handleCreateComment = this.handleCreateComment.bind(this);
+    this.handleOnClickReactions = this.handleOnClickReactions.bind(this);
   }
 
   handleOnWriteComment = (e) => {
@@ -38,7 +41,7 @@ class Publication extends React.Component {
     if (e.key === "Enter") {
       e.preventDefault();
       if (!this.state.comment.length) {
-        return ;
+        return;
       }
       this.setState(prevState => ({
         comments: prevState.comments.concat({
@@ -49,6 +52,19 @@ class Publication extends React.Component {
         comment: ""
       }));
     }
+  };
+
+  handleOnClickReactions = (e) => {
+    this.setState(prevState => ({
+      reactionsSelected: !prevState.reactionsSelected
+    }));
+  };
+
+  addReaction = (newReaction) => {
+    this.setState(prevState => ({
+      reactions: prevState.reactions.concat(newReaction),
+      reactionsSelected: false
+    }));
   };
 
   render() {
@@ -73,41 +89,56 @@ class Publication extends React.Component {
                creationDate={c.creationDate}
       />
     ));
+    const reactionBlue = this.state.reactions.some(r => (
+      r.reaction === "blue"
+    )) ? <img className="reaction-selected-image" src={"./imgs/blueCircle.png"} alt="reactionImage"/> : "";
+    const reactionYellow = this.state.reactions.some(r => (
+      r.reaction === "yellow"
+    )) ? <img className="reaction-selected-image" src={"./imgs/yellowCircle.png"} alt="reactionImage"/> : "";
+    const reactionRed = this.state.reactions.some(r => (
+      r.reaction === "red"
+    )) ? <img className="reaction-selected-image" src={"./imgs/redCircle.png"} alt="reactionImage"/> : "";
     return (
       <Card className="publication">
         <CardContent>
           <div className="row">
-            <div className="col-md-1 publication-avatar">
+            <div className="col-md-1 col-sm-4 col-2 publication-avatar">
               <img className="publication-avatar-image"
                    src={Avatar}
                    alt="avatar"
               />
             </div>
-            <div className="col-md-11">
-              <InputLabel className="label-publication">{this.state.creator.name} {this.state.creator.lastName}</InputLabel>
+            <div className="col-md-11 col-sm-8 col-10">
+              <InputLabel
+                className="label-publication">{this.state.creator.name} {this.state.creator.lastName}</InputLabel>
               <p className="date-publication">{this.state.creationDate}</p>
               <p className="publication-content">{this.state.content}</p>
-              <Button className="button-reactions">Reaccionar</Button>
+              <Button className="button-reactions"
+                      onClick={this.handleOnClickReactions}
+              >Reaccionar
+              </Button>&nbsp;&nbsp;
               <Button className="button-comments" onClick={this.handleOnClickComment}>Comentar</Button>
             </div>
           </div>
+          {this.state.reactionsSelected ? <Reactions addReaction={this.addReaction}/> : ""}
           <Divider/>
           <div className="row">
-            <div className="col-md-6 reactions">
-              Reacciones {this.state.reactions.length}
+            <div className="col-md-6 col-sm-6 col-6 reactions">
+              {reactionBlue} {reactionYellow} {reactionRed} {this.state.reactions.length === 0 ? "Sin reacciones" : this.state.reactions.length}
             </div>
-            <div className="col-md-6 comments">
+            <div className="col-md-6 col-sm-6 col-6 comments">
               <p>
                 {commentsLength === 0 ? "No hay comentarios" :
                   commentsLength > 1 ? commentsLength + " comentarios" : commentsLength + " comentario"
-                }</p>
+                }
+              </p>
             </div>
           </div>
           <Divider/>
           <div className="comments-section">
             {comments}
-            {this.state.commentSelected ? textareaComment  : ""}
-            {this.state.commentSelected ? small  : ""}
+            {this.state.commentSelected ? small : ""}
+            {this.state.commentSelected ? textareaComment : ""}
           </div>
         </CardContent>
       </Card>

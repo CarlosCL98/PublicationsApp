@@ -4,24 +4,36 @@
   margin-bottom: 3%;
 }
 
-.button-reactions {
-  color: #4cc830 !important;
-  text-transform: capitalize !important;
-  margin-top: -3% !important;
-}
-
+.button-reactions,
 .button-comments {
   color: #4cc830 !important;
   text-transform: capitalize !important;
   margin-top: -3% !important;
+  padding: 0 !important;
+  background: none !important;
+}
+
+.button-reactions:focus,
+.button-comments:focus {
+  outline: 0;
 }
 
 .publication-avatar {
-  text-align: right !important;
+  text-align: left !important;
+  @media screen and (max-device-width: 525px) {
+    padding: 0 5% !important;
+    text-align: center !important;
+  }
 }
 
 .publication-avatar-image {
-  width: 90%;
+  width: 95%;
+  @media screen and (max-device-width: 800px) {
+    width: 80%;
+  }
+  @media screen and (max-device-width: 525px) {
+    width: 200%;
+  }
 }
 
 .label-publication {
@@ -45,6 +57,11 @@
   font-size: 12px;
   margin-top: 0.5%;
   margin-bottom: -1%;
+  color: #4cc830 !important;
+  @media screen and (max-device-width: 525px) {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
 }
 
 .comments {
@@ -52,19 +69,41 @@
   font-size: 12px;
   margin-top: 0.5%;
   margin-bottom: -1%;
+  @media screen and (max-device-width: 525px) {
+    margin-top: 5%;
+    margin-bottom: 0%;
+  }
 }
 
 .comments-section {
   margin-top: 2%;
+  background-color: #f7f7f7;
 }
 
 .textarea-comments {
   width: 100%;
-  border-color: #dddddd;
-  margin-top: 2%;
+  border-color: #4cc830;
+  resize: none;
+  @media screen and (max-device-width: 525px) {
+    font-size: 12px;
+  }
+}
+
+.textarea-comments:focus {
+  box-shadow: 0 0 0 0.2em #d8f1d3 !important;
+  border-color: #9ac194 !important;
 }
 
 .textarea-comments-small {
   font-size: 12px;
   text-align: right !important;
+}
+
+.reaction-selected-image {
+  width: 5%;
+  padding-left: 0;
+  padding-right: 0;
+  @media screen and (max-device-width: 525px) {
+    width: 15%;
+  }
 }

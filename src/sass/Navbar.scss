@@ -1,14 +1,36 @@
 /*------------------------------------*\
   #NAVBAR
 \*------------------------------------*/
-
 .navbar {
   background-color: white !important;
   color: black;
   width: 100%;
 }
 
+.navbar-header {
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-brand {
+  float: none;
+  font-weight: bold !important;
+}
+
 .navbar-user {
   color: gray;
-  margin-top: 2%;
+  margin-top: 15% !important;
+  font-size: 13px;
+  @media screen and (max-device-width: 800px) {
+    margin-top: 5% !important;
+  }
+}
+
+.navbar-toggler {
+  width: 100%;
+}
+
+.collapse.navbar-collapse {
+  width: 8% !important;
 }

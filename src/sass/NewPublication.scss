@@ -10,6 +10,7 @@
 .textarea-publication {
   width: 100%;
   border: none;
+  resize: none;
 }
 
 .textarea-publication::placeholder {
@@ -18,10 +19,12 @@
 
 .textarea-publication:focus {
   border-color: #4cc830 !important;
+  box-shadow: 0 0 0 0.2em #d8f1d3 !important;
 }
 
 .card-actions-publication {
-  margin-left: 89%;
+  display: block !important;
+  text-align: right !important;
 }
 
 .button-publish {
@@ -29,4 +32,8 @@
   font-size: 12px !important;
   text-transform: capitalize !important;
   color: white !important;
+}
+
+.button-publish:focus {
+  outline: 0 !important;
 }

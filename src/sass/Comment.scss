@@ -4,6 +4,9 @@
 
 .comment-avatar-image {
   width: 70%;
+  @media screen and (max-device-width: 525px) {
+    width: 200%;
+  }
 }
 
 .comment-creator {
