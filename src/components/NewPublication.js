@@ -1,6 +1,6 @@
 import React from "react";
 import "../sass/NewPublication.scss";
-import {Card, CardActions, CardContent, Button} from "@material-ui/core";
+import {Card, CardActions, CardContent} from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 
 class NewPublication extends React.Component {

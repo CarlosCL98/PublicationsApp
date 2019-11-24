@@ -1,7 +1,6 @@
 import React from "react";
 import "../sass/Comment.scss";
 import Avatar from "../imgs/avatar.png";
-import {InputLabel} from "@material-ui/core";
 
 class Comment extends React.Component {
 

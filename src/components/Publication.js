@@ -1,9 +1,8 @@
 import React from "react";
 import "../sass/Publication.scss";
-import {Card, CardContent, InputLabel} from "@material-ui/core";
+import {Card, CardContent} from "@material-ui/core";
 import Avatar from "../imgs/avatar.png";
 import Divider from "@material-ui/core/Divider";
-import Button from "@material-ui/core/Button";
 import Comment from "./Comment";
 import Reactions from "./Reactions";
 
